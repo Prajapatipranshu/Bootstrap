@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> <title>Practical-15</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet"> </head>
+
+<body>
+
+<div class="container mt-4">
+
+<h4 class="text-start">A) Creating progress bars</h4> <div class="progress">
+<div class="progress-bar" style="width: 25%;"></div>
+</div>
+<br/><br/>
+
+<h4 class="text-start">B) Adding label to progress bars</h4> <div class="progress mt-5">
+<div class="progress-bar" style="width: 25%;">
+<span class="sr-only">25% Complete</span>
+</div>
+</div>
+<br/><br/>
+
+<h4 class="text-start">C) Creating multi-color, stripped and animated progress bars</h4> <div class="progress mt-5">
+
+<div class="progress-bar bg-success" style="width: 75%;"></div> </div>
+
+<div class="progress mt-5">
+
+<div class="progress-bar progress-bar-striped" style="width: 25%;"></div> </div>
+<div class="progress mt-5">
+<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:
+50%;"></div>
+</div>
+<br>
+<br>
+ 
+
+<h4 class="text-start">D) Changing value of progress bar dynamically using JavaScript</h4> <div class="progress">
+
+<div class="progress-bar progress-bar-striped" id="HarshPatel" style="min-width:
+20px;"></div>
+</div>
+<br>
+
+<script src="js/bootstrap.bundle.min.js"></script> <script>
+
+var i = 0;
+
+var bar = document.querySelector("#HarshPatel"); function makeProgress(){ if(i < 100){
+
+i = i + 1;
+bar.style.width = i + "%";
+bar.innerText = i + "%";
+}
+
+setTimeout("makeProgress()", 100);
+}
+makeProgress();
+
+</script>
+</body>
+
+</html>
+ 
